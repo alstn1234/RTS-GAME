@@ -14,13 +14,7 @@ public class EndGame : MonoBehaviourPunCallbacks
     {
         if (!isend)
         {
-
-            if (Player_Tower.IsDestroy)
-            {
-                Surrender(false);
-                isend = true;
-            }
-            else if (Enemy_Tower.IsDestroy)
+            if (Enemy_Tower.IsDestroy)
             {
                 Surrender(true);
                 isend = true;
@@ -33,14 +27,14 @@ public class EndGame : MonoBehaviourPunCallbacks
         photonView.RPC("LeaveOther", RpcTarget.Others, !iswin);
         PhotonNetwork.LeaveRoom();
         end_Popup.Active_End_Popup(iswin);
-        end_Popup.gameObject.SetActive(iswin);
+        end_Popup.gameObject.SetActive(true);
     }
 
     [PunRPC]
     public void LeaveOther(bool iswin)
     {
         end_Popup.Active_End_Popup(iswin);
-        end_Popup.gameObject.SetActive(iswin);
+        end_Popup.gameObject.SetActive(true);
         PhotonNetwork.LeaveRoom();
     }
 }

@@ -139,6 +139,8 @@ GameObject:
   - component: {fileID: 7371739156640040982}
   - component: {fileID: 357297035402390143}
   - component: {fileID: -5974519723020910258}
+  - component: {fileID: 8127181538267242589}
+  - component: {fileID: -564109925406813999}
   m_Layer: 0
   m_Name: Knome MaskTintPBR
   m_TagString: Untagged
@@ -196,7 +198,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &-5974519723020910258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +215,41 @@ MonoBehaviour:
   hpbar: {fileID: 0}
   maxHp: 10
   currenthp: 10
+--- !u!195 &8127181538267242589
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429003065155458372}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 0
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 0
+--- !u!114 &-564109925406813999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429003065155458372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb338882115305046b333cd15c00c71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &7429022837273543662
 GameObject:
   m_ObjectHideFlags: 0
