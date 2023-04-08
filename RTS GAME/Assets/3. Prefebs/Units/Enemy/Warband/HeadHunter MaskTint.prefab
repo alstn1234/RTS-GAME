@@ -584,8 +584,8 @@ MonoBehaviour:
   is_Enemy: 1
   Opposite_team: 
   is_range_long: 1
-  longRangeWeapon: {fileID: 0}
-  Weapon: {fileID: 0}
+  longRangeWeapon: {fileID: 5434170132391847832, guid: 0de12d16d6abb0c4485b2c354c221472, type: 3}
+  Weapon: {fileID: 4919108311551433477}
   AIr_Unit_Attack: 1
   attackRange: 10
   attack_anim_speed: 0

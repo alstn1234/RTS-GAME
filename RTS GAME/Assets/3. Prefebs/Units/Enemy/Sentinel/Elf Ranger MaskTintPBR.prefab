@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03e4da558c4d374fbcf2acf54f8758c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character_num: 0
+  character_num: 3
   is_Enemy: 1
   Opposite_team: 
   is_range_long: 1

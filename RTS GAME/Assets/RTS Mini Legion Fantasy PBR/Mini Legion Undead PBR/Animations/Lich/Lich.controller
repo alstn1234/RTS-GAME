@@ -210,7 +210,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: victory
+  m_Name: Victory
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
@@ -237,7 +237,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walk
+  m_Name: Walk
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
@@ -378,7 +378,7 @@ AnimatorStateMachine:
     m_Position: {x: 96, y: -36, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110290023}
-    m_Position: {x: 228, y: -108, z: 0}
+    m_Position: {x: 230, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110253850}
     m_Position: {x: 348, y: 36, z: 0}
@@ -387,7 +387,7 @@ AnimatorStateMachine:
     m_Position: {x: 96, y: 276, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110214952}
-    m_Position: {x: 348, y: 96, z: 0}
+    m_Position: {x: 350, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110224361}
     m_Position: {x: 348, y: 156, z: 0}
@@ -396,7 +396,7 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: 216, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6820326396172551472}
-    m_Position: {x: 598.8, y: -15.88002, z: 0}
+    m_Position: {x: 460, y: -50, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
