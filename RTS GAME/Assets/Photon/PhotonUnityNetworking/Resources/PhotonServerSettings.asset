@@ -50,6 +50,8 @@ MonoBehaviour:
   - armor_up
   - attack_up
   - Active_Popup
+  - LeaveAll
+  - LeaveOther
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

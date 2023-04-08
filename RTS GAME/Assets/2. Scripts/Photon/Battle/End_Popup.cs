@@ -20,7 +20,6 @@ public class End_Popup : MonoBehaviourPunCallbacks
 
     public void Active_End_Popup(bool iswin)
     {
-        this.gameObject.SetActive(true);
         if(iswin)
         {
             Win_Text.SetActive(true);
@@ -49,7 +48,8 @@ public class End_Popup : MonoBehaviourPunCallbacks
 
     public void ExitButton()
     {
-        PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene("MainMenu");
     }
+
+
 }

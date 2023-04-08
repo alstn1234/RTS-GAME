@@ -20,6 +20,7 @@ public class PhotonConnect : MonoBehaviourPunCallbacks
     }
     void Start()
     {
+        PhotonNetwork.Disconnect();
         PhotonNetwork.GameVersion = gameVersion;
         PhotonNetwork.ConnectUsingSettings();
 
