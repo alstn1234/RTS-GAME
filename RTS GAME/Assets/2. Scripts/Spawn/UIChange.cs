@@ -19,7 +19,10 @@ public class UIChange : MonoBehaviourPunCallbacks
     private int tower_lv = 1, attack_lv = 1, armor_lv = 1;
 
     // 업그레이드 레벨 텍스트
-    public TMP_Text tower, attack, armor; 
+    public TMP_Text tower, attack, armor;
+
+    // 업그레이드 가격 텍스트
+    public TMP_Text tower_price, attack_price, armor_price;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,7 +35,7 @@ public class UIChange : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void UnitClick()
@@ -43,7 +46,7 @@ public class UIChange : MonoBehaviourPunCallbacks
     public void AttackUpgrade()
     {
         //공격 업그레이드
-        if(AttackCost > crystal.instance.now_crystal)
+        if (AttackCost > crystal.instance.now_crystal)
         {
             UnitSpawn.instance.PriceLack();
             return;
@@ -54,6 +57,7 @@ public class UIChange : MonoBehaviourPunCallbacks
         photonView.RPC("attack_up", RpcTarget.Others);
         // 가격 증가
         AttackCost += 10;
+        attack_price.text = AttackCost.ToString();
 
 
     }
@@ -71,6 +75,7 @@ public class UIChange : MonoBehaviourPunCallbacks
         photonView.RPC("armor_up", RpcTarget.Others);
         //가격 증가
         ArmorCost += 10;
+        armor_price.text = ArmorCost.ToString();
 
 
     }
@@ -90,7 +95,7 @@ public class UIChange : MonoBehaviourPunCallbacks
         {
             mytower.GetComponent<MeshRenderer>().material = lv2;
         }
-        else if(tower_lv == 2)
+        else if (tower_lv == 2)
         {
             mytower.GetComponent<MeshRenderer>().material = lv3;
         }
@@ -106,7 +111,8 @@ public class UIChange : MonoBehaviourPunCallbacks
         photonView.RPC("tower_up", RpcTarget.Others, tower_lv);
         //가격 증가
         TowerCost += 10;
-        
+        tower_price.text = TowerCost.ToString();
+
     }
 
     [PunRPC]
@@ -115,7 +121,7 @@ public class UIChange : MonoBehaviourPunCallbacks
         GameObject othertower = GameObject.Find("Other WallTower");
         if (n == 2)
             othertower.GetComponent<MeshRenderer>().material = lv2;
-        else if(n == 3)
+        else if (n == 3)
             othertower.GetComponent<MeshRenderer>().material = lv3;
         else
             othertower.GetComponent<MeshRenderer>().material = lv4;

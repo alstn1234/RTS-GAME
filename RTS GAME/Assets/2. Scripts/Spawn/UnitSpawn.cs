@@ -169,11 +169,15 @@ public class UnitSpawn : MonoBehaviour
 
             return;
         }
-        crystal.instance.now_crystal -= Unit_Price[spawn_unit_num];
         if (spawn_unit_num == -1)
             return;
         if (unit_queue[spawn_unit_num].Count == 0)
+        {
+            if (spawn_unit_num == 0)
+                return;
             CreateUnit(spawn_unit_num);
+        }
+        crystal.instance.now_crystal -= Unit_Price[spawn_unit_num];
         Vector3 vec = new Vector3(-9 + n * 6.25f, 0, -23);
         GameObject unit = unit_queue[spawn_unit_num].Dequeue();
         if (spawn_unit_num != 0)
@@ -181,13 +185,16 @@ public class UnitSpawn : MonoBehaviour
             unit.GetComponent<AIUnit>().armor += PlusArmor;
             unit.GetComponent<AIUnit>().attack += PlusAttack;
         }
-        if(unit_queue[spawn_unit_num].Count == 1)
+        if (unit_queue[spawn_unit_num].Count == 1)
         {
-            if(spawn_unit_num == 0)
+            if (spawn_unit_num == 0)
             {
                 tf = UI_Pos.Find("Viewport").Find(unit_name + "_Unit(Clone)");
-                tf.GetChild(1).gameObject.SetActive(false);
-              
+                GameObject bt = tf.GetChild(1).gameObject;
+                bt.GetComponent<Button>().interactable = false;
+                bt.GetComponent<Image>().color = Color.black;
+
+
             }
         }
         Hp_Bar hp_bar = unit.GetComponent<Hp_Bar>();

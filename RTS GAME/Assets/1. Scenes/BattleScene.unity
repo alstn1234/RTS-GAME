@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1760,6 +1760,9 @@ MonoBehaviour:
   tower: {fileID: 1345572613}
   attack: {fileID: 1612974062}
   armor: {fileID: 400951429}
+  tower_price: {fileID: 5481811910397781282}
+  attack_price: {fileID: 6679447461919388476}
+  armor_price: {fileID: 5340262686845540571}
 --- !u!114 &394277182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8580,7 +8583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2883b24310dd9434ba0beaae20e6477c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  now_crystal: 10
+  now_crystal: 90
   tmp: {fileID: 3619313226977483329}
 --- !u!114 &1662050200
 MonoBehaviour:

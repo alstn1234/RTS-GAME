@@ -438,7 +438,7 @@ MonoBehaviour:
   attackRange: 8
   attack_anim_speed: 0
   armor: 0
-  attack: 4
+  attack: 3
   isInAir: 0
   hp_bar: {fileID: 6252846180488085001}
   EnemyTower: {fileID: 0}

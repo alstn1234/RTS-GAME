@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: -2684071438444622631}
   - component: {fileID: 1794655381085251041}
   - component: {fileID: 3060257716873260118}
+  - component: {fileID: 3881898416536449801}
   m_Layer: 9
   m_Name: Warlock Standard
   m_TagString: Untagged
@@ -330,7 +331,7 @@ MonoBehaviour:
   attackRange: 8
   attack_anim_speed: 0
   armor: 0
-  attack: 4
+  attack: 3
   isInAir: 0
   hp_bar: {fileID: 887153243162700779}
   EnemyTower: {fileID: 0}
@@ -358,6 +359,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &3881898416536449801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759020555436800881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2098304760bcc40a503f7da715cb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &759060443603264235
 GameObject:
   m_ObjectHideFlags: 0

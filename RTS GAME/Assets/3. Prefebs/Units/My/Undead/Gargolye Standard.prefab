@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: -128656399984791734}
   - component: {fileID: -7245397981852294978}
   - component: {fileID: -2240758768415418517}
+  - component: {fileID: -9193112411365786542}
   m_Layer: 9
   m_Name: Gargolye Standard
   m_TagString: Untagged
@@ -314,7 +315,7 @@ MonoBehaviour:
   longRangeWeapon: {fileID: 4120147466952756178, guid: 20c69ea67ee15b143ac4e8cb9ab8a71f, type: 3}
   Weapon: {fileID: 508195934148912271}
   AIr_Unit_Attack: 0
-  attackRange: 3
+  attackRange: 5
   attack_anim_speed: 0
   armor: 0
   attack: 2
@@ -378,6 +379,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &-9193112411365786542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511318628590368471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2098304760bcc40a503f7da715cb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &511339146343312159
 GameObject:
   m_ObjectHideFlags: 0

@@ -271,7 +271,7 @@ MonoBehaviour:
   longRangeWeapon: {fileID: 4120147466952756178, guid: 20c69ea67ee15b143ac4e8cb9ab8a71f, type: 3}
   Weapon: {fileID: 2894584844262590903}
   AIr_Unit_Attack: 0
-  attackRange: 3
+  attackRange: 5
   attack_anim_speed: 0
   armor: 0
   attack: 2
