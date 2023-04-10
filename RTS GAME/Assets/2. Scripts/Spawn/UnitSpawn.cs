@@ -18,6 +18,7 @@ public class UnitSpawn : MonoBehaviour
 
     public Transform Canvas_Position;
     public Transform UI_Pos;
+    private Transform tf;
     public GameObject SpawnPos;
     public string unit_name = "Human";
     private int[] Unit_Price = { 3, 5, 10, 10, 10, 20, 25, 30 };
@@ -84,6 +85,8 @@ public class UnitSpawn : MonoBehaviour
             {
                 CreateUnit(j);
             }
+            CreateUnit(0);
+            CreateUnit(0);
         }
     }
     void Update()
@@ -135,7 +138,7 @@ public class UnitSpawn : MonoBehaviour
     }
     private void SpawnClear(int n)
     {
-        Transform tf = UI_Pos.Find("Viewport").Find(unit_name + "_Unit(Clone)");
+        tf = UI_Pos.Find("Viewport").Find(unit_name + "_Unit(Clone)");
         for (int i = 1; i < 9; i++)
         {
             if (i == n + 1)
@@ -177,6 +180,15 @@ public class UnitSpawn : MonoBehaviour
         {
             unit.GetComponent<AIUnit>().armor += PlusArmor;
             unit.GetComponent<AIUnit>().attack += PlusAttack;
+        }
+        if(unit_queue[spawn_unit_num].Count == 1)
+        {
+            if(spawn_unit_num == 0)
+            {
+                tf = UI_Pos.Find("Viewport").Find(unit_name + "_Unit(Clone)");
+                tf.GetChild(1).gameObject.SetActive(false);
+              
+            }
         }
         Hp_Bar hp_bar = unit.GetComponent<Hp_Bar>();
         hp_bar.hpbar.gameObject.SetActive(true);

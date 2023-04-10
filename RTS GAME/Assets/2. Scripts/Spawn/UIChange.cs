@@ -52,6 +52,8 @@ public class UIChange : MonoBehaviourPunCallbacks
         crystal.instance.now_crystal -= AttackCost;
         UnitSpawn.instance.PlusAttack += 1;
         photonView.RPC("attack_up", RpcTarget.Others);
+        // 가격 증가
+        AttackCost += 10;
 
 
     }
@@ -67,6 +69,9 @@ public class UIChange : MonoBehaviourPunCallbacks
         crystal.instance.now_crystal -= ArmorCost;
         UnitSpawn.instance.PlusArmor += 1;
         photonView.RPC("armor_up", RpcTarget.Others);
+        //가격 증가
+        ArmorCost += 10;
+
 
     }
     public void TowerUpgrade()
@@ -99,6 +104,8 @@ public class UIChange : MonoBehaviourPunCallbacks
         mytower.GetComponent<Hp_Bar>().currenthp += 50;
         tower.text = (++tower_lv).ToString();
         photonView.RPC("tower_up", RpcTarget.Others, tower_lv);
+        //가격 증가
+        TowerCost += 10;
         
     }
 
